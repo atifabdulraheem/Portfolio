@@ -1,0 +1,182 @@
+<footer class="footer-container">
+  <app-nav-links />
+
+  <hr class="footer-line">
+
+  <p class="copyright">© 2025 ATIF ABDUL RAHEEM | All Rights Reserved</p>
+  <p class="designed-by">Designed & Developed by ATIF ABDUL RAHEEM</p>
+
+  <hr class="footer-line">
+
+  <nav class="nav-links">
+    <a routerLink="/privacy-policy" class="nav-link">Privacy Policy</a>
+    <a routerLink="/terms" class="nav-link">Terms & Conditions</a>
+    <a routerLink="/faq" class="nav-link">FAQs</a>
+  </nav>
+</footer>
+
+<style>
+  /* 🎨 Color Variables */
+  :root {
+    --black-bg: #000; /* Pure black */
+    --white-text: #f5f5f5;
+    --grey-text: #b0b0b0;
+    --primary-color: #2ab7b5;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --shadow-glow: rgba(42, 183, 181, 0.3);
+  }
+
+  /* 📌 Footer Container */
+  .footer-container {
+    background: var(--black-bg);
+    color: var(--white-text);
+    padding: 3.5rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px var(--shadow-glow);
+    border: 1px solid var(--border-color);
+    border-radius: 25px 25px 0 0; /* Upper two sides curved */
+    max-width: 1800px;
+    margin: 2rem auto 0; /* No margin at the bottom */
+    position: relative;
+  }
+
+  /* 🌍 Footer Navigation Links */
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+  }
+
+  .nav-link {
+    color: var(--white-text);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: #33c2c0;
+    text-shadow: 0 0 12px rgba(42, 183, 181, 0.7);
+    transform: scale(1.08);
+  }
+
+  .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease-in-out;
+    margin: auto;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* 📌 Footer Divider Line */
+  .footer-line {
+    width: 80%;
+    margin: 1.5rem auto;
+    border: none;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  /* 📌 Copyright Text */
+  .copyright,
+  .designed-by {
+    font-size: 1rem;
+    color: var(--grey-text);
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  .copyright:hover,
+  .designed-by:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(42, 183, 181, 0.5);
+  }
+
+  .designed-by {
+    margin-top: -10px;
+    font-size: 0.95rem;
+  }
+
+  /* 📱 Responsive Design for Different Screen Sizes */
+  @media (max-width: 1024px) {
+    .footer-container {
+      padding: 3rem 1.8rem;
+      border-radius: 20px 20px 0 0; /* Maintain upper curve */
+    }
+
+    .nav-links {
+      gap: 1.5rem;
+    }
+
+    .nav-link {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      padding: 2.5rem 1.5rem;
+      border-radius: 15px 15px 0 0; /* Maintain upper curve */
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav-link {
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+    }
+
+    .footer-line {
+      width: 90%;
+    }
+
+    .copyright,
+    .designed-by {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-container {
+      padding: 2rem 1rem;
+      border-radius: 10px 10px 0 0; /* Maintain upper curve */
+    }
+
+    .nav-links {
+      gap: 0.8rem;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      padding: 0.3rem 0.6rem;
+    }
+
+    .footer-line {
+      width: 95%;
+    }
+
+    .copyright,
+    .designed-by {
+      font-size: 0.85rem;
+    }
+  }
+</style>

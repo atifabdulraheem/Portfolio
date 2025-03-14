@@ -1,0 +1,22 @@
+<div class="card text-center">
+  <img [src]="project.src" class="card-img-top" [alt]="project.name">
+  <div class="card-body">
+    <h5 class="card-title mt-3">
+      {{ project.name }}
+    </h5>
+    <p class="card-text">{{ project.description }}</p>
+    <div>
+      <span class="fw-bold">Technologies used:</span>
+      <ul class="technologies-list">
+        @for (technology of project.technologies; track technology) {
+          <li>{{ technology }}</li>
+        }
+      </ul>
+    </div>
+    <div>
+      <a [href]="project.link" target="_blank" class="bt btn btn-color-3">
+        Check on Github
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<section id="contacts" class="mx-auto">
+  <p class="fs-5 text-center text-light">Get in Touch</p>
+  <h1 class="fw-bold text-center mb-5 text-white">Contact Me</h1>
+  <div class="row justify-content-center">
+    <div class="col-10 col-md-6 col-xl-4">
+      <div class="card m-2 rounded-5 border-0 shadow-sm glassmorphism">
+        <div class="row py-4 g-3">
+          <!-- Email Link -->
+          <div class="col-6 text-center">
+            <a [href]="'mailto:' + email" class="d-flex align-items-center justify-content-center text-decoration-none">
+              <i class="fa fa-envelope fa-2x icon me-2"></i>Email
+            </a>
+          </div>
+          <!-- LinkedIn Link -->
+          <div class="col-6 text-center">
+            <a (click)="goToLinkedin()" class="d-flex align-items-center justify-content-center text-decoration-none">
+              <i class="fab fa-linkedin fa-2x icon me-2"></i>LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

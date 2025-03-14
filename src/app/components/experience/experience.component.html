@@ -1,0 +1,22 @@
+<section id="skills" class="col-12 col-md-8 col-xl-10 mx-auto">
+  <div class="row">
+    <div class="col-12">
+      <p class="fs-5 text-center text-light">Explore My</p>
+      <h1 class="text-center fw-bold mb-5 text-white">Skills</h1>
+    </div>
+  </div>
+
+  <!-- Skills Carousel -->
+  <div class="experience-items">
+    <div class="experience-slide">
+      @for (item of getExperience; track item.index) {
+        <img [ngSrc]="item.src" [alt]="item.name" class="item-img" height="80" width="100" priority>
+      }
+    </div>
+    <div class="experience-slide">
+      @for (item of getExperience; track item.index) {
+        <img [ngSrc]="item.src" [alt]="item.name" class="item-img" height="80" width="100" priority>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,247 @@
+// Color Variables
+$black-bg: #121212;
+$white-text: #F5F5F5;
+$grey-text: #D1D5DB;
+$primary-color: #2AB7B5;
+$secondary-color: #F4A261;
+$dark-card-bg: rgba(40, 40, 40, 0.75);
+$card-border: rgba(255, 255, 255, 0.15);
+$box-shadow-light: rgba(42, 183, 181, 0.3);
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Projects Section Styling
+#projects {
+  background-color: $black-bg;
+  padding: 3rem;
+  width: 95%;
+  max-width: 1500px;
+  height: auto;
+  margin: 3rem auto;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px $box-shadow-light;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}
+
+// Project Cards
+.card {
+  min-height: 450px;
+  max-width: 100%;
+  background-color: $dark-card-bg;
+  color: $white-text;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px $box-shadow-light;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  margin: 1rem;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(42, 183, 181, 0.4);
+  }
+}
+
+// Project Card Image
+.card-img-top {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Project Card Title
+.card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, $primary-color, $secondary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+// Project Technologies List
+.technologies-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0;
+
+  li {
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $black-bg;
+    }
+  }
+}
+
+// Carousel Navigation Buttons
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .carousel-button {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $black-bg;
+    background-color: $white-text;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $grey-text;
+      color: $black-bg;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// GitHub Button
+.github-button {
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: $black-bg;
+  background-color: $white-text;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1.5rem;
+
+  &:hover {
+    background-color: $grey-text;
+    color: $black-bg;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  }
+}
+
+// Responsive Design Adjustments
+@media (max-width: 1024px) {
+  #projects {
+    padding: 2.5rem;
+    margin: 2.5rem auto;
+    border-radius: 40px;
+  }
+
+  .card {
+    min-height: 400px;
+  }
+
+  .card-img-top {
+    height: 220px;
+    width: 95%;
+  }
+
+  .github-button {
+    padding: 1.3rem 3.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #projects {
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 30px;
+  }
+
+  .card {
+    min-height: 350px;
+  }
+
+  .card-img-top {
+    height: 200px;
+    width: 90%;
+  }
+
+  .carousel-button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .github-button {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+// 📱 Best Mobile View Enhancements
+@media (max-width: 480px) {
+  #projects {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    border-radius: 20px;
+    width: 98%; // Full width for smaller screens
+  }
+
+  .card {
+    min-height: auto;
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .card-img-top {
+    height: 180px;
+    width: 100%;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  .technologies-list li {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .carousel-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+
+    .carousel-button {
+      width: 80%;
+      padding: 0.8rem 2rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  .github-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}

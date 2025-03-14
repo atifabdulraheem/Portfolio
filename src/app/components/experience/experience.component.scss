@@ -1,0 +1,113 @@
+// Color Variables
+$black-color: black;            // Soft black for background
+$white-color: #F5F5F5;          // Off-white for text
+$grey-text: #B0B0B0;            // Muted grey for secondary text
+$primary-color: #2AB7B5;        // Teal accent for hover highlight
+
+// Skills Section Styles
+#skills {
+  background: $black-color;
+  padding: 4rem 3rem;
+  width: 95%;
+  max-width: 1500px;
+  margin: 2rem auto;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(49, 151, 149, 0.3);
+
+  .experience-items {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+    border-radius: 20px;
+
+    // 🔥 Pause scrolling when hovered
+    &:hover .experience-slide {
+      animation-play-state: paused;
+    }
+  }
+
+  .experience-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+  }
+
+  .item-img {
+    height: 80px !important;
+    width: auto !important;
+    margin: 0 40px !important;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideIn 1.5s ease-out forwards;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+
+    &:hover {
+      transform: scale(1.15) translateX(0);
+      opacity: 1;
+      filter: brightness(1.2);
+      box-shadow: 0 0 20px rgba(42, 183, 181, 0.7),
+                  0 0 40px rgba(42, 183, 181, 0.3);
+    }
+  }
+
+  h1.fw-bold {
+    color: $white-color;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .text-light {
+    color: $grey-text;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+}
+
+// Keyframes for Infinite Scroll Animation
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+// Keyframes for Slide-In Effect
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  #skills {
+    padding: 3rem 2rem;
+    margin: 1.5rem auto;
+    border-radius: 25px;
+  }
+
+  .experience-items {
+    padding: 40px 0;
+  }
+
+  .item-img {
+    height: 60px !important;
+    margin: 0 25px !important;
+  }
+
+  h1.fw-bold {
+    font-size: 2.5rem;
+  }
+
+  .text-light {
+    font-size: 1.2rem;
+  }
+}

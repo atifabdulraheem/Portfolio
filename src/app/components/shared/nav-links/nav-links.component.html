@@ -1,0 +1,7 @@
+<ul class="navbar-nav">
+  @for (item of navItems; track item) {
+    <li class="nav-item px-3 fs-4">
+      <a class="nav-link" (click)="scrollTo(item)" >{{ item }}</a>
+    </li>
+  }
+</ul>
