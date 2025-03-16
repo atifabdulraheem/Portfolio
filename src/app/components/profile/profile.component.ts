@@ -17,7 +17,7 @@ export class ProfileComponent {
   }
 
   openResume() {
-    window.open("./assets/.pdf");
+    window.open("../assets/Atif_Resume.pdf");
   }
 
   goToLinkedin() {

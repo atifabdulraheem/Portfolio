@@ -5,9 +5,10 @@
     <div class="col-10 col-md-6 col-xl-4">
       <div class="card m-2 rounded-5 border-0 shadow-sm glassmorphism">
         <div class="row py-4 g-3">
-          <!-- Email Link -->
+          <!-- Gmail Link -->
           <div class="col-6 text-center">
-            <a [href]="'mailto:' + email" class="d-flex align-items-center justify-content-center text-decoration-none">
+            <a [attr.href]="'https://mail.google.com/mail/?view=cm&fs=1&to=' + email" target="_blank"
+              class="d-flex align-items-center justify-content-center text-decoration-none">
               <i class="fa fa-envelope fa-2x icon me-2"></i>Email
             </a>
           </div>

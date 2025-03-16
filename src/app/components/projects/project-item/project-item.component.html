@@ -13,10 +13,26 @@
         }
       </ul>
     </div>
-    <div>
-      <a [href]="project.link" target="_blank" class="bt btn btn-color-3">
+     
+    <div class="d-flex justify-content-center gap-3 mt-3">
+      <a [href]="project.link" target="_blank" class="btn btn-primary px-4 py-2 fw-bold rounded-pill shadow-sm">
         Check on Github
       </a>
+      <a [href]="project.liveLink" target="_blank" class="btn btn-success px-4 py-2 fw-bold rounded-pill shadow-sm">
+        Live Version
+      </a>
+      
     </div>
+     <!-- Buttons Section -->
+     <div class="carousel-buttons d-flex justify-content-center mt-3">
+      <button class="carousel-button btn btn-dark px-4 py-2 fw-bold rounded-pill shadow-sm me-3" 
+              data-bs-target="#projectsCarousel" data-bs-slide="prev">
+        &lt; Previous
+      </button>
+      <button class="carousel-button btn btn-primary px-4 py-2 fw-bold rounded-pill shadow-sm" 
+              data-bs-target="#projectsCarousel" data-bs-slide="next">
+        Next &gt;
+      </button>
+    </div>  
   </div>
 </div>
