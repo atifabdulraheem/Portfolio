@@ -17,9 +17,9 @@ export class ProfileComponent {
   }
 
   openResume() {
-    window.open("../assets/Atif_Resume.pdf");
+    window.open('assets/Atif_Abdul_Raheem_Cloud.pdf', '_blank');
   }
-
+  
   goToLinkedin() {
     window.open('https://www.linkedin.com/in/atif-abdul-raheem-412837264', '_blank');
   }
